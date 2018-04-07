@@ -34,7 +34,8 @@
     },
     "scripts": {
         "post-create-project-cmd": [
-            "@php application app:rename"
+            "@php application app:rename",
+            "@php -r \"file_exists('.env') || copy('.env_example', '.env');\""
         ]
     },
     "minimum-stability": "dev",
