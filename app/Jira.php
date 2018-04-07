@@ -315,7 +315,7 @@ class Jira
 	{
 
 		if(!$fileName) {
-			$fileName = (app()->environment()).'_alcli';
+			$fileName = (app()->environment()).'_jiracat';
 		}
 
 		$config = [];
@@ -340,8 +340,8 @@ class Jira
 			$found = TRUE;
 		}
 
-		if(!$found && $fileName != 'alcli') {
-			return self::resolveConfigArray('alcli');
+		if(!$found && $fileName != 'jiracat') {
+			return self::resolveConfigArray('jiracat');
 		}
 
 		return $config;
