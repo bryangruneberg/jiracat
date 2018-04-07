@@ -13,7 +13,7 @@ trait JiraConfigTrait
     {
 
         if(!$fileName) {
-            $fileName = (app()->environment()).'_alcli';
+            $fileName = (app()->environment()).'_jiracat';
         }
 
         $config = [];
@@ -38,8 +38,8 @@ trait JiraConfigTrait
             $found = TRUE;
         }
 
-        if(!$found && $fileName != 'alcli') {
-            return self::resolveConfigArray('alcli');
+        if(!$found && $fileName != 'jiracat') {
+            return self::resolveConfigArray('jiracat');
         }
 
         return $config;
