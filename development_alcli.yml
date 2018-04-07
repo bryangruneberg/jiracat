@@ -1,0 +1,10 @@
+queries:
+  mine: 
+    assignee in (currentUser())
+  watched: 
+    watcher in (currentUser())
+users:
+  bryan: bgruneberg
+issues:
+  standup: ALGM-114
+

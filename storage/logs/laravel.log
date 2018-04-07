@@ -1,0 +1,72 @@
+[2018-04-06 23:50:49] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [default] is not defined. at /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php:181)
+[stacktrace]
+#0 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(115): Illuminate\\Log\\LogManager->resolve('default')
+#1 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(103): Illuminate\\Log\\LogManager->get('default')
+#2 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(519): Illuminate\\Log\\LogManager->driver()
+#3 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Exceptions/Handler.php(113): Illuminate\\Log\\LogManager->error('Class 'App\\\\Cons...', Array)
+#4 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(81): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Symfony\\Component\\Debug\\Exception\\FatalErrorException))
+#5 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleException(Object(Symfony\\Component\\Debug\\Exception\\FatalErrorException))
+#6 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleShutdown()
+#7 {main}
+"} 
+[2018-04-06 23:50:49] laravel.ERROR: Class 'App\Console\Commands\JiraBaseCommand' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Console\\Commands\\JiraBaseCommand' not found at /home/bomoko/projects/personal/jiracat/app/Commands/JiraTransitionIssueCommand.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2018-04-06 23:51:30] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [default] is not defined. at /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php:181)
+[stacktrace]
+#0 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(115): Illuminate\\Log\\LogManager->resolve('default')
+#1 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(103): Illuminate\\Log\\LogManager->get('default')
+#2 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(519): Illuminate\\Log\\LogManager->driver()
+#3 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Exceptions/Handler.php(113): Illuminate\\Log\\LogManager->error('Class 'App\\\\Cons...', Array)
+#4 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(81): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Symfony\\Component\\Debug\\Exception\\FatalErrorException))
+#5 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleException(Object(Symfony\\Component\\Debug\\Exception\\FatalErrorException))
+#6 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleShutdown()
+#7 {main}
+"} 
+[2018-04-06 23:51:30] laravel.ERROR: Class 'App\Console\Commands\JiraBaseCommand' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Console\\Commands\\JiraBaseCommand' not found at /home/bomoko/projects/personal/jiracat/app/Commands/JiraListUserWorklogsCommand.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2018-04-06 23:52:08] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [default] is not defined. at /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php:181)
+[stacktrace]
+#0 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(115): Illuminate\\Log\\LogManager->resolve('default')
+#1 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(103): Illuminate\\Log\\LogManager->get('default')
+#2 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(519): Illuminate\\Log\\LogManager->driver()
+#3 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Exceptions/Handler.php(113): Illuminate\\Log\\LogManager->error('Class 'App\\\\Cons...', Array)
+#4 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(81): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Symfony\\Component\\Debug\\Exception\\FatalErrorException))
+#5 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(123): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleException(Object(Symfony\\Component\\Debug\\Exception\\FatalErrorException))
+#6 [internal function]: Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleShutdown()
+#7 {main}
+"} 
+[2018-04-06 23:52:08] laravel.ERROR: Class 'App\Console\Commands\JiraBaseCommand' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Class 'App\\Console\\Commands\\JiraBaseCommand' not found at /home/bomoko/projects/personal/jiracat/app/Commands/JiraListUserWorklogsCommand.php:7)
+[stacktrace]
+#0 {main}
+"} 
+[2018-04-06 23:52:24] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [default] is not defined. at /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php:181)
+[stacktrace]
+#0 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(115): Illuminate\\Log\\LogManager->resolve('default')
+#1 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(103): Illuminate\\Log\\LogManager->get('default')
+#2 /home/bomoko/projects/personal/jiracat/vendor/illuminate/log/LogManager.php(519): Illuminate\\Log\\LogManager->driver()
+#3 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Exceptions/Handler.php(113): Illuminate\\Log\\LogManager->error('The command def...', Array)
+#4 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(353): Illuminate\\Foundation\\Exceptions\\Handler->report(Object(Symfony\\Component\\Console\\Exception\\LogicException))
+#5 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(124): Illuminate\\Foundation\\Console\\Kernel->reportException(Object(Symfony\\Component\\Console\\Exception\\LogicException))
+#6 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/framework/src/Kernel.php(76): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 /home/bomoko/projects/personal/jiracat/jiracat(37): LaravelZero\\Framework\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2018-04-06 23:52:24] laravel.ERROR: The command defined in "App\Commands\JiraBaseCommand" cannot have an empty name. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\LogicException(code: 0): The command defined in \"App\\Commands\\JiraBaseCommand\" cannot have an empty name. at /home/bomoko/projects/personal/jiracat/vendor/symfony/console/Application.php:451)
+[stacktrace]
+#0 /home/bomoko/projects/personal/jiracat/vendor/illuminate/console/Application.php(219): Symfony\\Component\\Console\\Application->add(Object(App\\Commands\\JiraBaseCommand))
+#1 /home/bomoko/projects/personal/jiracat/vendor/illuminate/console/Application.php(208): Illuminate\\Console\\Application->addToParent(Object(App\\Commands\\JiraBaseCommand))
+#2 /home/bomoko/projects/personal/jiracat/vendor/illuminate/console/Application.php(230): Illuminate\\Console\\Application->add(Object(App\\Commands\\JiraBaseCommand))
+#3 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(221): Illuminate\\Console\\Application->resolve('App\\\\Commands\\\\Ji...')
+#4 /home/bomoko/projects/personal/jiracat/vendor/illuminate/console/Application.php(147): Illuminate\\Foundation\\Console\\Kernel->Illuminate\\Foundation\\Console\\{closure}(Object(Illuminate\\Console\\Application))
+#5 /home/bomoko/projects/personal/jiracat/vendor/illuminate/console/Application.php(70): Illuminate\\Console\\Application->bootstrap()
+#6 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(317): Illuminate\\Console\\Application->__construct(Object(LaravelZero\\Framework\\Application), Object(Illuminate\\Events\\Dispatcher), 'unreleased')
+#7 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/framework/src/Kernel.php(87): Illuminate\\Foundation\\Console\\Kernel->getArtisan()
+#8 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/foundation/src/Illuminate/Foundation/Console/Kernel.php(120): LaravelZero\\Framework\\Kernel->bootstrap()
+#9 /home/bomoko/projects/personal/jiracat/vendor/laravel-zero/framework/src/Kernel.php(76): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 /home/bomoko/projects/personal/jiracat/jiracat(37): LaravelZero\\Framework\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 {main}
+"} 
