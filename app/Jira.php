@@ -324,4 +324,17 @@ class Jira
         return $api->api(Api::REQUEST_POST, '/rest/api/2/issue/', $params);
     }
 
+    public function getServerInfo()
+    {
+        $api = $this->getApi();
+        $result = $api->api(Api::REQUEST_GET, '/rest/api/2/serverInfo/', []);
+        $raw = $result->getResult();
+        return $raw;
+    }
+
+    public function getServerTime()
+    {
+      $info = $this->getServerInfo();
+      return $info['serverTime'] ?? '';
+    }
 }

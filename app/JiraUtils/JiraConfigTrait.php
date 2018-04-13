@@ -9,6 +9,28 @@ trait JiraConfigTrait
         return ".yml";
     }
 
+    public static function getStorageDirectory()
+    {
+            $dirName = self::getHomeDirectory() . DIRECTORY_SEPARATOR . ".jiracat_" . (app()->environment());
+            return $dirName;
+    }
+
+    public static function prepareStorageDirectory() 
+    {
+      $dir = self::getStorageDirectory();
+      if(! is_dir($dir))
+      {
+        mkdir($dir);
+      }
+
+      if(! is_dir($dir))
+      {
+        throw new \Exception("Could not create storage directory: " . $dir);
+      }
+
+      return TRUE;
+    }
+
     public static function resolveConfigArray($fileName = NULL)
     {
 

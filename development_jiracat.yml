@@ -7,4 +7,40 @@ users:
   bryan: bgruneberg
 issues:
   standup: ALGM-114
-
+channels:
+  inky:
+    slack:
+      - https://hooks.slack.com/services/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
+  isabel:
+    slack:
+      - https://hooks.slack.com/services/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
+trackers:
+  algm:
+    jql: (sprint = ALGM AND (sprint in openSprints() OR sprint in futuresprints())) OR (reporter in (iracine, italbot) OR assignee in(iracine, italbot) OR watcher in (iracine, italbot))
+    comment-triggers:
+      isabel:
+        triggers:
+          - "[~iracine]"
+        channel: "isabel"
+      inky:
+        triggers:
+          - "[~italbot]"
+        channel: "inky"
+    assignment-triggers:
+      isabel:
+        triggers:
+          - "iracine"
+        channel: "isabel"
+      inky:
+        triggers:
+          - "italbot"
+        channel: "inky"
+    reporter-triggers:
+      isabel:
+        triggers:
+          - "iracine"
+        channel: "isabel"
+      inky:
+        triggers:
+          - "italbot"
+        channel: "inky"
