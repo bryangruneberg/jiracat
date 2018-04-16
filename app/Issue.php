@@ -41,6 +41,39 @@ class Issue
         return FALSE;
     }
 
+    public function getPriority()
+    {
+        $data = array_change_key_case($this->jiraIssue->getFields(), CASE_LOWER);
+        if(isset($data['priority'])) 
+        {
+            return $data['priority'];
+        }
+
+        return [];
+    }
+
+    public function getDueDate()
+    {
+        $data = array_change_key_case($this->jiraIssue->getFields(), CASE_LOWER);
+        if(isset($data['duedate'])) 
+        {
+            return $data['duedate'];
+        }
+
+        return "";
+    }
+
+    public function getPriorityName()
+    {
+        $data = $this->getPriority();
+        if(isset($data['name'])) 
+        {
+            return $data['name'];
+        }
+
+        return "";
+    }
+
     public function getLabels()
     {
         $data = array_change_key_case($this->jiraIssue->getFields(), CASE_LOWER);

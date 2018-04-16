@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 class JiraLabelIssueCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:label {issue : The issue to label} {label}';
+    protected $signature = 'label {issue : The issue to label} {label}';
     protected $description = 'Assign a label to a JIRA issue';
 
     public function handle()

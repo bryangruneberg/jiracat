@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 class JiraUnlabelIssueCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:unlabel {issue : The issue to unlabel} {label}';
+    protected $signature = 'unlabel {issue : The issue to unlabel} {label}';
     protected $description = 'Remove a label from a JIRA issue';
 
     public function handle()

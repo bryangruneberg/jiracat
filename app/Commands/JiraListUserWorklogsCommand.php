@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class JiraListUserWorklogsCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:lsuw {--user=} {--from=} {--to=} {--day=today : Report on a specific day} {--month} {--week} {--style=table : table or csv output}';
+    protected $signature = 'lsuw {--user=} {--from=} {--to=} {--day=today : Report on a specific day} {--month} {--week} {--style=table : table or csv output}';
     protected $description = 'List JIRA user worklogs';
 
     public function handle()

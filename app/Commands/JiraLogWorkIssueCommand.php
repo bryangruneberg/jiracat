@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 class JiraLogWorkIssueCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:lw {issue : The issue on which to log work} {--comment= : The comment for the worklog} {--date= : The date the work was done} {--time= : The time spent working} {--list} {--force}';
+    protected $signature = 'lw {issue : The issue on which to log work} {--comment= : The comment for the worklog} {--date= : The date the work was done} {--time= : The time spent working} {--list} {--force}';
     protected $description = 'Log work on a JIRA issue';
 
     public function handle()

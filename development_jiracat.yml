@@ -1,8 +1,8 @@
 queries:
   mine: 
-    assignee in (currentUser())
+    assignee in (currentUser()) order by priority,duedate asc
   watched: 
-    watcher in (currentUser())
+    watcher in (currentUser()) order by priority,duedate asc
 users:
   bryan: bgruneberg
 issues:

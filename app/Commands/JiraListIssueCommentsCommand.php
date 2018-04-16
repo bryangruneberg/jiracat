@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class JiraListIssueCommentsCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:lsc {issue : The issue to list}';
+    protected $signature = 'lsc {issue : The issue to list}';
     protected $description = 'List JIRA issue comments';
 
     public function handle()

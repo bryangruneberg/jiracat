@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class JiraListIssueWorklogsCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:lsw {issue : The issue to list} {--style=table : table or csv output}';
+    protected $signature = 'lsw {issue : The issue to list} {--style=table : table or csv output}';
     protected $description = 'List JIRA issue worklogs';
 
     public function handle()

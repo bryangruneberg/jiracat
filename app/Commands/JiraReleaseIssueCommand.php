@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 class JiraReleaseIssueCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:release {issue : The issue to view}';
+    protected $signature = 'release {issue : The issue to view}';
     protected $description = 'Unassign JIRA issue';
 
     public function handle()

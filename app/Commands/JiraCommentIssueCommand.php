@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 class JiraCommentIssueCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:pc {issue : The issue on which to comment} {--comment= : The comment string} {--list} {--force}';
+    protected $signature = 'pc {issue : The issue on which to comment} {--comment= : The comment string} {--list} {--force}';
     protected $description = 'Post a comment on a JIRA issue';
 
     public function handle()

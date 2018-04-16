@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class JiraListIssuesCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:ls {query=mine : query or stored query name} {--style=table : table or csv output}';
+    protected $signature = 'ls {query=mine : query or stored query name} {--style=table : table or csv output}';
     protected $description = 'List JIRA issues';
 
     public function handle()

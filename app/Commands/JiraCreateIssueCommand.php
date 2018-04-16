@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class JiraCreateIssueCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:ci {project : The project in which to create the issue} {--summary= : The summary string} {--description=} {--type=Task : The issue type} {--label=* : Include a label} {--component=* : Include a component} {--assign=} {--force}';
+    protected $signature = 'ci {project : The project in which to create the issue} {--summary= : The summary string} {--description=} {--type=Task : The issue type} {--label=* : Include a label} {--component=* : Include a component} {--assign=} {--force}';
     protected $description = 'Create an issue in a project';
 
     public function handle()

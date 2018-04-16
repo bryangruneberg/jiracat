@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class JiraViewIssueCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:cat {issue : The issue to view} {--style=table : table or csv output} {--worklogs : Include the worklogs} {--comments : Include comments} {--data=no : | Include field data}';
+    protected $signature = 'cat {issue : The issue to view} {--style=table : table or csv output} {--worklogs : Include the worklogs} {--comments : Include comments} {--data=no : | Include field data}';
     protected $description = 'View JIRA issue';
 
     public function handle()
@@ -115,13 +115,13 @@ class JiraViewIssueCommand extends JiraBaseCommand
         if($this->option('worklogs')) {
             $this->line("");
             $this->comment('Worklogs:');
-            $this->call('jira:lsw', ['issue' => $issueKey, '--style' => $this->option('style')]);
+            $this->call('lsw', ['issue' => $issueKey, '--style' => $this->option('style')]);
         }
 
         if($this->option('comments')) {
             $this->line("");
             $this->comment('Comments:');
-            $this->call('jira:lsc', ['issue' => $issueKey]);
+            $this->call('lsc', ['issue' => $issueKey]);
         }
     }
 }

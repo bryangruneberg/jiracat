@@ -337,4 +337,24 @@ class Jira
       $info = $this->getServerInfo();
       return $info['serverTime'] ?? '';
     }
+
+    public function getPriorities()
+    {
+        $api = $this->getApi();
+        $result = $api->api(Api::REQUEST_GET, '/rest/api/2/priority/', []);
+        $raw = $result->getResult();
+        return $raw;
+    }
+
+    public function getPrioritiesList()
+    {
+        $raw = $this->getPriorities();
+        $ret = [];
+
+        foreach($raw as $r) {
+            $ret[$r['id']] = $r['name'];
+        }
+
+        return $ret;
+    }
 }

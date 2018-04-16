@@ -7,7 +7,7 @@ use Illuminate\Console\Command;
 
 class JiraGrabIssueCommand extends JiraBaseCommand 
 {
-    protected $signature = 'jira:grab {issue : The issue to view} {--user= : The user to assign the issue to}';
+    protected $signature = 'grab {issue : The issue to view} {--user= : The user to assign the issue to}';
     protected $description = 'Assign JIRA issue to a user';
 
     public function handle()
