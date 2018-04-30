@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 
 class JiraTransitionIssueCommand extends JiraBaseCommand 
 {
-    protected $signature = 'ti {issue : The issue to transition} {--state= : Transition state}';
+    protected $signature = 'ti {issue : The issue to transition} {--state= : Transition state} {--release : Unassign the issue} {--grab : Grab the issue}';
     protected $description = 'Transition JIRA issue state';
 
     public function handle()
@@ -50,6 +50,16 @@ class JiraTransitionIssueCommand extends JiraBaseCommand
         $stateId = array_search($state, $choices);
         $this->info("Changing state to " . $state . " [".$stateId."]");
         $result = app(Jira::class)->transitionIssue($issueKey, $stateId);
+
+        if($this->option('grab')) {
+            $this->info("Grabbing the issue");
+            $this->call('grab', ['issue' => $issueKey]);
+        }
+
+        if($this->option('release')) {
+            $this->info("Releasing the issue");
+            $this->call('release', ['issue' => $issueKey]);
+        }
 
         $this->call('cat', ['issue' => $issueKey]);
     }
