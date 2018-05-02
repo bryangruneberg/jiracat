@@ -31,8 +31,8 @@ class Jira
     public function getApi()
     {
         return new \chobie\Jira\Api(
-          $this->jiraUrl,
-          new \chobie\Jira\Api\Authentication\Basic($this->jiraUsername,
+            $this->jiraUrl,
+            new \chobie\Jira\Api\Authentication\Basic($this->jiraUsername,
             $this->jiraPassword)
         );
     }
@@ -48,9 +48,9 @@ class Jira
     }
 
     public function editIssue(
-      $issueKey,
-      stdClass $object = null,
-      array $fields = []
+        $issueKey,
+        stdClass $object = null,
+        array $fields = []
     ) {
         $api = $this->getApi();
         $updates = [];
@@ -82,10 +82,10 @@ class Jira
     {
         $api = $this->getApi();
         $result = $api->transition(
-          $issueKey,
-          [
-            'transition' => ['id' => $targetState],
-          ]
+            $issueKey,
+            [
+                'transition' => ['id' => $targetState],
+            ]
         );
 
         return ($result);
@@ -164,13 +164,45 @@ class Jira
         return $issue;
     }
 
+    public function setIssueWatchers($issue, array $watchers)
+    {
+        $api = $this->getApi();
+        return $api->setWatchers($issue, $watchers);
+    }
+
+    public function unsetIssueWatchers($issue, array $watchers)
+    {
+        $api = $this->getApi();
+        $result = array();
+
+        foreach ($watchers as $watcher) {
+            $result[] = $api->api(Api::REQUEST_DELETE, sprintf('/rest/api/2/issue/%s/watchers?username=' . $watcher, $issue));
+        }
+
+        return $result;
+    }
+
+
+    public function getIssueWatchers($issue)
+    {
+        $api = $this->getApi();
+        $rawWatchers = $api->api(Api::REQUEST_GET, sprintf('/rest/api/2/issue/%s/watchers', $issue))
+            ->getResult();
+
+        if (isset($rawWatchers['errorMessages'])) {
+            return [];
+        }
+
+        return $rawWatchers;
+    }
+
     public function getCurrentUserData()
     {
         $api = $this->getApi();
         $rawUser = $api->api(Api::REQUEST_GET, '/rest/auth/latest/session')
-          ->getResult();
+            ->getResult();
 
-        if (isset($rawWorkLogs['errorMessages'])) {
+        if (isset($rawUser['errorMessages'])) {
             return [];
         }
 
@@ -192,7 +224,7 @@ class Jira
 
         $api = $this->getApi();
         $rawWorkLogs = $api->api(Api::REQUEST_GET,
-          '/rest/tempo-timesheets/3/worklogs', $params, true, false, false);
+            '/rest/tempo-timesheets/3/worklogs', $params, true, false, false);
 
         if (isset($rawWorkLogs['errorMessages'])) {
             return [];
@@ -221,7 +253,7 @@ class Jira
 
         $api = $this->getApi();
         $ret = $api->api(Api::REQUEST_POST,
-          '/rest/api/2/issue/' . $issue . '/comment', $params);
+            '/rest/api/2/issue/' . $issue . '/comment', $params);
 
         return $ret;
     }
@@ -244,7 +276,7 @@ class Jira
 
         $api = $this->getApi();
         return $api->api(Api::REQUEST_POST,
-          '/rest/api/2/issue/' . $issue . '/worklog', $params);
+            '/rest/api/2/issue/' . $issue . '/worklog', $params);
     }
 
     public function getIssueQuery($queryName)
@@ -278,26 +310,26 @@ class Jira
     }
 
     public function createIssue(
-      $projectKey,
-      $summary,
-      $type,
-      $description = null,
-      $assign = null,
-      array $labels,
-      array $components
+        $projectKey,
+        $summary,
+        $type,
+        $description = null,
+        $assign = null,
+        array $labels,
+        array $components
     ) {
         $api = $this->getApi();
 
         $params = [
-          'fields' => [
-            'project' => [
-              'key' => $projectKey,
+            'fields' => [
+                'project' => [
+                    'key' => $projectKey,
+                ],
+                'summary' => $summary,
+                'issuetype' => [
+                    "name" => $type,
+                ],
             ],
-            'summary' => $summary,
-            'issuetype' => [
-              "name" => $type,
-            ],
-          ],
         ];
 
         if ($description) {
@@ -316,7 +348,7 @@ class Jira
             $params['fields']['components'] = [];
             foreach ($components as $component) {
                 $params['fields']['components'][] = [
-                  'name' => $component,
+                    'name' => $component,
                 ];
             }
         }
@@ -334,8 +366,8 @@ class Jira
 
     public function getServerTime()
     {
-      $info = $this->getServerInfo();
-      return $info['serverTime'] ?? '';
+        $info = $this->getServerInfo();
+        return $info['serverTime'] ?? '';
     }
 
     public function getPriorities()
